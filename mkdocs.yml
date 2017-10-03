@@ -1,1 +1,4 @@
-site_name: My Docs
+site_name: Pandas examples
+theme: readthedocs
+extra_css:
+    - extra.css
