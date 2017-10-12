@@ -36,3 +36,41 @@ fix_date = pd.to_datetime(data_raw['DATE_COL'])
 # create new df, assigning value of the coverted string to date
 data_fixed = data_raw.assign(DATE_COL_FIXED = fix_date)
 ```
+
+## Encoding errors
+
+If you get an import error about a codec, like `UnicodeDecodeError: 'utf-8' codec can't decode byte 0xd1 in position 2: invalid continuation byte`, then you can set encoding on import:
+
+``` python
+data_raw = pd.read_csv(
+    'path_to_data',
+    index_col=None,
+    encoding="ISO-8859-1"
+    )
+```
+
+## Dealing with Mr. Null
+
+I had a case where I wanted to keep a cell value as "NULL". This can be done with a combination of [`keep_default_na` and `na_values`](http://pandas.pydata.org/pandas-docs/version/0.13.1/io.html#na-values)
+
+``` python
+data_raw = pd.read_csv(
+    'path_to_data',
+    index_col=None,
+    keep_default_na=False,
+    na_values=[""]
+    )
+```
+
+The `na_values` list could be a list of more values, as noted [in docs]((http://pandas.pydata.org/pandas-docs/version/0.13.1/io.html#na-values).
+
+## fillna all the time?
+
+Right now, I'm thiking it is good practice to fill `NaN` fields with blank text, because if you use `groupby`, it excludes any records that have `NaN` as a "value" in the grouping key. So, if you are grouping on `first_name`, `last_name` and `middle_name`, records with no `middle_name` would be excluded. Use `fillna` to make that a blank cell, and it is then included in the `groupby`.
+
+The answer, I think, is to use `fillna` [after importing](http://pandas.pydata.org/pandas-docs/version/0.13.1/generated/pandas.DataFrame.fillna.html) data into a dataframe:
+
+``` python
+data_filled = data_raw.fillna('')
+```
+
