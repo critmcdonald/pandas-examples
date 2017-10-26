@@ -25,3 +25,20 @@ people.rename(columns={people.columns[2]: "Records" })
 ```
 
 ![Renamed](images/rename-done.png)
+
+## Rename multiple columns
+
+Create a dictionary with the old name and then new name for each column. Then pass that into the `.rename()` function.
+
+```python
+our_columns = {
+    "tradename" : "TradeName",
+    "ll_streetaddressnbr" : "Numb",
+    "ll_addressline1" : "Street",
+    "ll_cityname" : "City",
+    "ll_countyname" : "County",
+    "allSub" : "Licences"
+}
+df_renamed = df.rename(index=str, columns=our_columns)
+```
+
