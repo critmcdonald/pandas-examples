@@ -18,7 +18,7 @@ There are [other options](http://pandas.pydata.org/pandas-docs/version/0.20/gene
 
 ## Setting data types for columns
 
-I had a case where I wanted to set the datatype of all the columns on an import, but I also had dates. There is an option to [set the dtype upon import](https://pandas.pydata.org/pandas-docs/stable/io.html#specifying-column-data-types, but I got an error when trying to use datatime as an option, and also when using `parse_dates=` at the same import.
+I had a case where I wanted to set the datatype of all the columns on an import, but I also had dates. There is an option to [set the dtype upon import](https://pandas.pydata.org/pandas-docs/stable/io.html#specifying-column-data-types), but I got an error when trying to use datatime as an option, and also when using `parse_dates=` at the same import.
 
 So, I implicitly set the dates as strings upon import, then re-assigned them as dates afterward:
 
@@ -62,7 +62,7 @@ data_raw = pd.read_csv(
     )
 ```
 
-The `na_values` list could be a list of more values, as noted [in docs]((http://pandas.pydata.org/pandas-docs/version/0.13.1/io.html#na-values).
+The `na_values` list could be a list of more values, as noted [in docs](http://pandas.pydata.org/pandas-docs/version/0.13.1/io.html#na-values).
 
 ## fillna all the time?
 
