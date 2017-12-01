@@ -1,3 +1,15 @@
+
+# Pandas Examples
+
+Not official documentation of any kind.
+
+## Other references I use
+- [Official pandas](https://pandas.pydata.org/pandas-docs/stable/)
+- [Chris Albon](https://chrisalbon.com/#Python)
+- [Pandas Guide](http://pandasguide.readthedocs.io/en/latest/index.html)
+- [First Python Notebook](http://www.firstpythonnotebook.org/)
+- [Statistics in Python](http://www.scipy-lectures.org/packages/statistics/index.html)
+
 # Welcome to MkDocs
 
 For full documentation visit [mkdocs.org](http://mkdocs.org).
