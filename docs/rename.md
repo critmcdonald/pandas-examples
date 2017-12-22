@@ -1,6 +1,22 @@
 rename
 ======
 
+## Rename multiple columns
+
+Create a dictionary with the old name and then new name for each column. Then pass that into the `.rename()` function.
+
+```python
+our_columns = {
+    "tradename" : "TradeName",
+    "ll_streetaddressnbr" : "Numb",
+    "ll_addressline1" : "Street",
+    "ll_cityname" : "City",
+    "ll_countyname" : "County",
+    "allSub" : "Licences"
+}
+df_renamed = df.rename(index=str, columns=our_columns)
+```
+
 ## Renaming a count record in a dataframe.
 
 I had a `groupby` function where I used `.size()` to count the number of records in each row. But the result leaves that dataframe column name as "0".
@@ -25,20 +41,4 @@ people.rename(columns={people.columns[2]: "Records" })
 ```
 
 ![Renamed](images/rename-done.png)
-
-## Rename multiple columns
-
-Create a dictionary with the old name and then new name for each column. Then pass that into the `.rename()` function.
-
-```python
-our_columns = {
-    "tradename" : "TradeName",
-    "ll_streetaddressnbr" : "Numb",
-    "ll_addressline1" : "Street",
-    "ll_cityname" : "City",
-    "ll_countyname" : "County",
-    "allSub" : "Licences"
-}
-df_renamed = df.rename(index=str, columns=our_columns)
-```
 

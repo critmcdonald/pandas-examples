@@ -25,16 +25,17 @@ So, I implicitly set the dates as strings upon import, then re-assigned them as 
 ``` python
 column_types = {
     "NAME_COL": pd.np.str,
-    "DATE_COL": pd.np.str
+    "DATE_COL_01": pd.np.str,
+    "DATE_COL_02": pd.np.str
 }
 
 # import raw data
 data_raw = pd.read_csv('path_to_data', index_col=None, dtype=column_types)
 
-# assign var to fix the dates
-fix_date = pd.to_datetime(data_raw['DATE_COL'])
-# create new df, assigning value of the coverted string to date
-data_fixed = data_raw.assign(DATE_COL_FIXED = fix_date)
+dates_fixed = df.assign(
+    NEW_DATE_COL_01 = pd.to_datetime(data_raw['DATE_COL_01']),
+    NEW_DATE_COL_02 = pd.to_datetime(data_raw['DATE_COL_02']),
+)
 ```
 
 ## Encoding errors
