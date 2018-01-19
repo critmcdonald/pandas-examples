@@ -75,3 +75,6 @@ The answer, I think, is to use `fillna` [after importing](http://pandas.pydata.o
 data_filled = data_raw.fillna('')
 ```
 
+## Combine multiple sheets and tabs
+
+Ben Welsh [walks through this](https://github.com/palewire/pandas-combine-workbooks-example/blob/master/pandas-combine-workbooks-example.ipynb).
