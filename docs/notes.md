@@ -18,3 +18,21 @@ df [ 'NewColumn' ] = df.apply(dothis, axis=1)
 
 
 H/T Max Lee, The Northern Virginia Daily
+
+## filter, get value counts, normalize
+
+```python
+ri[ri.driver_gender == "F"].violation.value_counts(normalize=True)
+```
+
+from [intermediate tutorial](https://github.com/justmarkham/pycon-2018-tutorial)
+
+## str.contains()
+
+when you want to look throug the values of a column for a string and count how many rows has that string. `ri` is my dataframe.
+
+``` python
+ri['frisk'] = ri.search_type.str.contains('Protective Frisk')
+ri.frisk.value_counts()
+```
+

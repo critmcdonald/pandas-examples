@@ -9,6 +9,8 @@ Not official documentation of any kind.
 - [Pandas Guide](http://pandasguide.readthedocs.io/en/latest/index.html)
 - [First Python Notebook](http://www.firstpythonnotebook.org/)
 - [Statistics in Python](http://www.scipy-lectures.org/packages/statistics/index.html)
+- [(Beginner) Data analysis with Pandas video tutorial](https://www.youtube.com/playlist?list=PL5-da3qGB5ICCsgW1MxlZ0Hq8LL5U3u9y)
+- [(Intermedia) Pandas best practices video tutorial](https://www.youtube.com/watch?v=hl-TGI4550M)
 
 # Welcome to MkDocs
 
