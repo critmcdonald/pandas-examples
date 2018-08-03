@@ -36,3 +36,6 @@ ri['frisk'] = ri.search_type.str.contains('Protective Frisk')
 ri.frisk.value_counts()
 ```
 
+## division by zero
+
+Use school-funding project to show how to try/except on creating a new column using division when some values might be zero.

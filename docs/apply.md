@@ -1,7 +1,6 @@
-.apply: Apply a function a row or column
-========================================
+# Apply a function to a row or column
 
-- [.apply](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.apply.html) in pandas docs.
+Uses the [.apply](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.apply.html) method.
 
 ## Create a new column based on a function
 
